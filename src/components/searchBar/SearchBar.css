@@ -1,0 +1,43 @@
+.taskbar {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items: center;
+    padding: 0 19px;
+    margin-right: 60px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    flex: 1;
+  }
+  
+  button[type="button"] {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+  }
+
+  @media only screen and (max-width: 824px) {
+    .search-box {
+      margin-right: 0px;
+    }
+  }
+  

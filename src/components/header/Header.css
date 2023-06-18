@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.header{
+    background-color: rgb(34, 33, 33);
+    font-weight: 800;
+    font-family:'Roboto', sans-serif;
+    padding-left: 11rem;
+    padding-right: 10rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.4rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    
+} 
+
+.headerLeft,.headerRight{
+    display: flex;
+    align-items: center;
+}
+
+a>span{
+    
+    margin: 0 15px;
+    font-size: 15px;
+    cursor: pointer;
+    color: white;
+    padding: 5px 2px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: 200ms ease-in-out;
+}
+
+a>span:hover{
+    color: rgb(115, 110, 110);
+}
+
+.header__icon{
+    width: 60px;
+    cursor: pointer;
+}
+
+.user__avatar{
+    font-size: 2rem;
+}
+
+.loginright{
+    display: flex;
+}
+.loginbutton{
+    margin-top: 3px;
+    border-radius: 5px;
+    background-color:#5568fe;
+    width: 4.5rem;
+    height: 2.1rem;
+    color: white;
+    cursor:pointer;
+}
+.menu-bar{
+    position: relative;
+    top:9px;
+}
+.menu-bar ul {
+    list-style: none;
+  }
+  .menu-bar ul li {
+    position: relative;
+  }
+  .fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+  }
+  .menu-bar ul li a {
+    /* font-size: 20px; */
+    color: white;
+    text-decoration: none;
+    /* transition: all 0.3s; */
+  }
+  
+.dropdown-menu{
+    display: none;
+}
+.menu-bar ul li:hover .dropdown-menu {
+    z-index: 99;
+    display: block;
+    position: absolute;
+    left: 0;
+    /* top: 100%; */
+    top: 22px;
+    background-color: rgb(0, 0, 0);
+  }
+  .menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    margin: 10px;
+  }
+  .menu-bar ul li:hover .dropdown-menu ul li {
+    width: 150px;
+    padding: 10px;
+  }
+  .b{
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+  }
+@media only screen and (max-width: 943px) {
+    a>span{
+        font-size: 1.0rem;
+    }
+  }
+  
+@media only screen and (max-width: 824px) {
+    a>span{
+        font-size:1.1rem;
+        margin: 0 20px;
+    }
+  }
+  
+
+
+  
