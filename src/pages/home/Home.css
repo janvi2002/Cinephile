@@ -33,6 +33,9 @@
 .posterImage__rating{
     margin-left: 3rem;
 }
+.fas{
+    padding: 1.3px;
+}
 
 .posterImage__description{
     font-style: italic;

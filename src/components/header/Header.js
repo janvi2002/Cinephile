@@ -1,22 +1,24 @@
 import React from 'react'
 import "./Header.css"
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
 import SearchBar from '../searchBar/SearchBar'
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Header = () => {
   const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
+  
   return (
     <div className='header'>
+        <Link  exact to="/"><img className='header__icon' src="cine.png"/></Link>
       <div className='headerLeft'>
-        <Link to="/"><img className='header__icon' src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/2560px-IMDB_Logo_2016.svg.png" /></Link>
-        <Link to="/movies/popular" style={{ textDecoration: 'none' }}><span>Popular</span></Link>
-        <Link to="/movies/top_rated" style={{ textDecoration: 'none' }}><span>Latest</span></Link>
-        <Link to="/movies/upcoming" style={{ textDecoration: 'none' }}><span>UpComming</span></Link>
+        <Link  exact to="/movies/popular" style={{ textDecoration: 'none' }}><span>Popular</span></Link>
+        <Link exact to="/movies/top_rated" style={{ textDecoration: 'none' }}><span>Top Rated</span></Link>
+        <Link exact to="/movies/upcoming" style={{ textDecoration: 'none' }}><span>UpComming</span></Link>
 
       </div>
       <div className='loginright'>
         <SearchBar />
+
         {/* log in log out by auth0 react */}
         {
           isAuthenticated ? (
@@ -36,7 +38,7 @@ const Header = () => {
             </div>
 
           ) : (
-            <button className='loginbutton' onClick={() => loginWithRedirect()}>Sign In</button>
+            <button className='loginbutton' onClick={() => console.log(loginWithRedirect())}>Sign In</button>
           )
         }
 
@@ -47,6 +49,3 @@ const Header = () => {
 
 export default Header
 
-{/* //   <button className='loginbutton' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-        //   Sign Out
-        // </button> */}
