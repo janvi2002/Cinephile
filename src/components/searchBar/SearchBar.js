@@ -30,18 +30,22 @@ function SearchBar() {
         setResults([]); // Handle fetch errors by clearing results
       });
   }
+  const showMovies = () => {
+    setResults([])
+    setQuery('');
+  }
 
   return (
     <div className="taskbar">
       <div className="search-box">
         <input type="text" placeholder="Search..." value={query} onChange={fetchdata} />
-        <button type="button"><FaSearch /></button>
+        {/* <button type="button"><FaSearch /></button> This button is not functional */}
       </div>
       <div className='searchcontainer'>
         {results.length > 0 && (
           <ul className='ul'>
             {results.map((movie) => (
-              <Link key={movie.id} to={`/movie/${movie.id}`} style={{ textDecoration: "none" }}>
+              <Link onClick={showMovies} key={movie.id} to={`/movie/${movie.id}`} style={{ textDecoration: "none" }}>
                 <li>{movie.title}</li>
               </Link>
             ))}
